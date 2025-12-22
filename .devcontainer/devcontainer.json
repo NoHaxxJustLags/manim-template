@@ -1,0 +1,21 @@
+{
+    "name": "Manim Dev Environment",
+    "image": "manimcommunity/manim:stable",
+    "remoteUser": "root",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "Rickaym.manim-sideview"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "./.venv/bin/python",
+                "python.terminal.activateEnvironment": true,
+                "manim-sideview.runOnSave": false,
+                "manim-sideview.defaultManimPath": "./.venv/bin/manim"
+            }
+        }
+    },
+    "postCreateCommand": "bash .devcontainer/setup.sh"
+}
